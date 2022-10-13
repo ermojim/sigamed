@@ -3590,8 +3590,13 @@ class SuperAdminController extends AbstractController
                     $teacherEmail=$teacher->getEmail();
 
                     $email = (new Email())
+
+                        ->from('nides.ti@ucr.ac.cr')   /*Modificar para poner el corro de SALUD Publica*/
+                        ->to('nides.ti@ucr.ac.cr')
+
                         ->from('sistemas.ecp@ucr.ac.cr')
                         ->to('sistemas.ecp@ucr.ac.cr')
+
                         ->addTo('erick.morajimenez@ucr.ac.cr')
                         ->addTo($teacherEmail)
                         //->cc('cc@example.com')
@@ -3599,7 +3604,11 @@ class SuperAdminController extends AbstractController
                         //->replyTo('fabien@example.com')
                         //->priority(Email::PRIORITY_HIGH)
                         ->subject('Solicitud de revisión de carga académica')
+
+                        ->text('La escuela de Salud Pública solicita la revisión de las cargas académicas, '. $detailin . ', accese el sitio del sistema programas.ecp.ucr.ac.cr para verificarla.');
+
                         ->text('La escuela de Ciencias Políticas solicita la revisión de las cargas académicas, '. $detailin . ', accese el sitio del sistema programas.ecp.ucr.ac.cr para verificarla.');
+
                     //  ->html('<p>See Twig integration for better HTML integration!</p>');
 
                     try {
@@ -3667,8 +3676,13 @@ class SuperAdminController extends AbstractController
                 $teacherEmail=$teacher->getEmail();
 
                 $email = (new Email())
+
+                    ->from('nides.ti@ucr.ac.cr')     /*Modificar para poner correo de la escuela*/
+                    ->to('nides.ti@ucr.ac.cr')
+
                     ->from('sistemas.ecp@ucr.ac.cr')
                     ->to('sistemas.ecp@ucr.ac.cr')
+
                     ->addTo('erick.morajimenez@ucr.ac.cr')
                     ->addTo($teacherEmail)
                     //->cc('cc@example.com')
@@ -3676,7 +3690,11 @@ class SuperAdminController extends AbstractController
                     //->replyTo('fabien@example.com')
                     //->priority(Email::PRIORITY_HIGH)
                     ->subject('Solicitud de revisión de carga académica')
+
+                    ->text('La escuela de Salud Pública solicita la revisión de las cargas académicas, '. $detailin . ', accese el sitio del sistema programas.ecp.ucr.ac.cr para verificarla.');
+
                     ->text('La escuela de Ciencias Políticas solicita la revisión de las cargas académicas, '. $detailin . ', accese el sitio del sistema programas.ecp.ucr.ac.cr para verificarla.');
+
                 //  ->html('<p>See Twig integration for better HTML integration!</p>');
 
                 try {
@@ -3738,8 +3756,13 @@ class SuperAdminController extends AbstractController
                 $teacherEmail=$teacher->getEmail();
 
                 $email = (new Email())
+
+                    ->from('nides.ti@ucr.ac.cr')
+                    ->to('nides.ti@ucr.ac.cr')
+
                     ->from('sistemas.ecp@ucr.ac.cr')
                     ->to('sistemas.ecp@ucr.ac.cr')
+
                     ->addTo('erick.morajimenez@ucr.ac.cr')
                     ->addTo($teacherEmail)
                     //->cc('cc@example.com')
@@ -3747,7 +3770,11 @@ class SuperAdminController extends AbstractController
                     //->replyTo('fabien@example.com')
                     //->priority(Email::PRIORITY_HIGH)
                     ->subject('Aviso de comprobación de carga académica')
+
+                    ->text('La escuela de Salud Pública comunica que las carga académica, '. $detailin . ', ha sido aprobada y cerrada.');
+
                     ->text('La escuela de Ciencias Políticas comunica que las carga académica, '. $detailin . ', ha sido aprobada y cerrada.');
+
                 //  ->html('<p>See Twig integration for better HTML integration!</p>');
 
                 try {
@@ -3938,9 +3965,16 @@ class SuperAdminController extends AbstractController
 
                 $mailer->send($message);*/
                 $email = (new Email())
+
+                    ->from('nides.ti@ucr.ac.cr')
+                    ->to('nides.ti@ucr.ac.cr')
+                    ->addTo('erick.morajimenez@ucr.ac.cr')
+                    ->addTo('jorgestwart.perez@ucr.ac.cr')
+
                     ->from('sistemas.ecp@ucr.ac.cr')
                     ->to('sistemas.ecp@ucr.ac.cr')
                     ->addTo('erick.morajimenez@ucr.ac.cr')
+
 
 
                     //->cc('cc@example.com')
